@@ -22,7 +22,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ rails g atoz_sso:install
+
+this will generating file in config/initializer/atoz_sso.rb and please set your configuration sso API
+
+    AtozSso.configure do |config|
+      #config.app_id = ENV['sso_app_id']
+      #config.app_secret = ENV['sso_app_secret']
+      #config.app_client_key = ENV['sso_client_key']
+      #config.end_point = ENV['sso_endpoint']
+    end
+
 
 ## Development
 
