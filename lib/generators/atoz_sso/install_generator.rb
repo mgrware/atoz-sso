@@ -7,7 +7,7 @@ module AtozSso
       def copy_initializer
         template "sso_initializer.rb", "config/initializers/atoz_sso.rb"
 
-        puts "Install complete! Truly Outrageous!"
+        puts "Install complete! mantap cuks!"
       end
     end
   end
