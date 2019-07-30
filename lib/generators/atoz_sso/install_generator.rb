@@ -5,8 +5,12 @@ module AtozSso
       desc "Creates Generator initializer for your application"
 
       def copy_initializer
+        puts "create config file"
         template "sso_initializer.rb", "config/initializers/atoz_sso.rb"
-
+        puts "create migration file "
+        template "sso_user_migration.rb", "db/migrate/#{Time.now.strftime("%Y%m%d%H%M%S")}_create_sso_users.rb"
+        puts "create model"
+        template "sso_user_model.rb", "app/models/sso_user.rb"
         puts "Install complete! mantap cuks!"
       end
     end
